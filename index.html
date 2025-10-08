@@ -45,20 +45,14 @@
       text-decoration: none;
     }
     .nav-menu a {
-      color: var(--text-color);
+      color: #5f6368;
       text-decoration: none;
       margin-left: 25px;
       font-weight: 500;
+      transition: color 0.2s ease;
     }
-    .nav-menu a.button {
-      background-color: var(--primary-color);
-      color: var(--white);
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .nav-menu a.button:hover {
-      background-color: #185abc;
+    .nav-menu a:hover, .nav-menu a.active {
+      color: var(--primary-color);
     }
     /* Hero Section */
     .hero {
@@ -74,6 +68,20 @@
       font-size: 1.2em;
       color: #5f6368;
       margin-bottom: 2em;
+    }
+    .button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #185abc;
     }
     /* Features Section */
     .features {
@@ -115,7 +123,7 @@
     }
     @media (max-width: 768px) {
       .features-grid { flex-direction: column; }
-      .nav-menu { display: none; } /* Simple responsive hide for menu */
+      .nav-menu { display: none; }
     }
   </style>
 </head>
@@ -123,10 +131,12 @@
 
   <header class="header">
     <div class="container">
-      <a href="#" class="logo">Jalali Toolkit</a>
+      <a href="index.html" class="logo">Jalali Toolkit</a>
       <nav class="nav-menu">
-        <a href="#features">Features</a>
-        <a href="#" class="button">Install for Free</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://github.com/eliasalipour/eliasalipour.github.io/issues" target="_blank">Report Issues</a>
       </nav>
     </div>
   </header>
