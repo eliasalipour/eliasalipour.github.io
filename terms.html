@@ -4,33 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service - Jalali Toolkit for Sheets</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.8; margin: 0; background-color: #f8f9fa; color: #333; }
+    :root { --primary-color: #1a73e8; --text-color: #3c4043; --background-color: #f8f9fa; --white: #ffffff; --border-color: #dadce0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.8; margin: 0; background-color: var(--background-color); color: var(--text-color); }
     .container { max-width: 800px; margin: 40px auto; padding: 30px; background: white; border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); }
-    h1 { color: #1a73e8; }
-    .back-link { display: inline-block; margin-top: 30px; text-decoration: none; color: #1a73e8; font-weight: bold; }
+    h1 { color: var(--primary-color); }
+    .back-link { display: inline-block; margin-top: 30px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
+    .header { background-color: var(--white); padding: 15px 0; border-bottom: 1px solid var(--border-color); }
+    .header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; font-size: 1.5em; font-weight: bold; color: var(--text-color); text-decoration: none; }
+    .logo img { height: 32px; margin-right: 12px; }
+    .nav-menu a { color: #5f6368; text-decoration: none; margin-left: 25px; font-weight: 500; transition: color 0.2s ease; }
+    .nav-menu a:hover, .nav-menu a.active { color: var(--primary-color); }
+    @media (max-width: 768px) { .nav-menu { display: none; } }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Terms of Service</h1>
-    <p>By installing and using the "Jalali Toolkit for Sheets" add-on ("the Add-on"), you agree to the following terms and conditions:</p>
-    
-    <h3>Service Provision</h3>
-    <p>The Add-on is provided "as-is" and "as-available," without any warranties of any kind. There is no guarantee that its operation will be uninterrupted or error-free.</p>
-
-    <h3>Limitation of Liability</h3>
-    <p>The developer shall not be held liable for any direct or indirect damages (including, but not limited to, loss of data) that may arise from the use of, or inability to use, this Add-on. The full responsibility for using this tool rests with the user.</p>
-
-    <h3>Intellectual Property</h3>
-    <p>All rights pertaining to the Add-on are the property of its developer.</p>
-    
-    <h3>Changes to Terms</h3>
-    <p>These terms may be updated in the future. Your continued use of the Add-on constitutes acceptance of the new terms.</p>
-
-    <a href="index.html" class="back-link">&larr; Back to Home</a>
-  </div>
-
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Jalali Toolkit Logo">
+        <span>Jalali Toolkit</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="terms.html" class="active">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://github.com/eliasalipour/eliasalipour.github.io/issues" target="_blank">Report Issues</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Terms of Service</h1>
+      <p>By installing and using the "Jalali Toolkit for Sheets" add-on ("the Add-on"), you agree to the following terms and conditions:</p>
+      <h3>Service Provision</h3>
+      <p>The Add-on is provided "as-is" and "as-available," without any warranties of any kind. There is no guarantee that its operation will be uninterrupted or error-free.</p>
+      <h3>Limitation of Liability</h3>
+      <p>The developer shall not be held liable for any direct or indirect damages (including, but not to, loss of data) that may arise from the use of, or inability to use, this Add-on. The full responsibility for using this tool rests with the user.</p>
+      <h3>Intellectual Property</h3>
+      <p>All rights pertaining to the Add-on are the property of its developer.</p>
+      <h3>Changes to Terms</h3>
+      <p>These terms may be updated in the future. Your continued use of the Add-on constitutes acceptance of the new terms.</p>
+      <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+  </main>
 </body>
 </html>
